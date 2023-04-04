@@ -1,3 +1,5 @@
+<br>
+<br>
 <p align="center"><img src="assets/images/firex.png" width="300" alt="CodeIgniter Firex Edition"></p>
 
 <p align="center">
@@ -10,6 +12,8 @@
 ## CodeIgniter 3 - Custom Firex Edition
 
 CodeIgniter 3 Custom Firex Edition. Framework CI3 yang sudah full modifikasi menggunakan Bootstrap 5 menjadi lebih powerful. 
+
+<p align="center"><img src="assets/images/sc/1.png" width="100%" alt="CodeIgniter Firex Edition"></p>
 
 **************************
 ## Fitur-Fitur
