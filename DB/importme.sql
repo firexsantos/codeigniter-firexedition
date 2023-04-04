@@ -73,8 +73,7 @@ CREATE TABLE `group` (
 /*Data for the table `group` */
 
 insert  into `group`(`id_group`,`nm_group`) values 
-(1,'Superuser'),
-(2,'Administrator');
+(1,'Superuser');
 
 /*Table structure for table `jk` */
 
@@ -88325,8 +88324,7 @@ CREATE TABLE `modul` (
 
 insert  into `modul`(`id_modul`,`nm_modul`,`keterangan`,`nm_seo`,`url_menu`,`icon`,`group`,`main`,`urutan`,`aktif`,`uc`,`notif`) values 
 (1,'Pengguna',NULL,'users','users','<i class=\"ph-users\"></i>','1',0,2,'yes','no',NULL),
-(2,'Superuser',NULL,'superuser','users/superuser',NULL,'1',1,1,'yes','no',NULL),
-(3,'Administrator',NULL,'admin','users/admin',NULL,'1',1,2,'yes','no',NULL);
+(2,'Administrator',NULL,'admin','users/admin',NULL,'1',1,1,'yes','no',NULL);
 
 /*Table structure for table `provinsi` */
 
@@ -88401,7 +88399,7 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`id_user`,`no_user`,`nama`,`id_jk`,`id_agama`,`hp`,`alamat`,`email`,`username`,`password`,`id_group`,`groupdef`,`gambar`,`blocked`) values 
-(1,'111','Firman Santosa',1,1,NULL,NULL,NULL,'admin','21232f297a57a5a743894a0e4a801fc3',1,'.1.2.',NULL,'no');
+(1,'111','Firman Santosa',1,1,'+6281218161788','Jl. Tarbarak, No. 03, Pasir Pengaraian','admin@sifirman.com','admin','21232f297a57a5a743894a0e4a801fc3',1,'.1.',NULL,'no');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
