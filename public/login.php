@@ -54,7 +54,7 @@
                   <div class="hero-content w-100 min-vh-100 d-flex flex-column">
                     <div class="row g-0">
                       <div class="col-10 col-lg-9 mx-auto">
-                        <div class="logo mt-5 mb-5 mb-md-0"> <a class="d-flex" href="<?= base_url() ?>" title="<?= identitas("judul") ?>"><img src="<?= identitas("logo") ?>" alt="<?= identitas("judul") ?>" style="width:100px;"> <img src="<?= base_url("assets/images/km.png") ?>" alt="Kampus Merdeka" style="width:170px;height:100px;" class="mx-3"></a> </div>
+                        <div class="logo mt-5 mb-5 mb-md-0"> <a class="d-flex" href="<?= base_url() ?>" title="<?= identitas("judul") ?>"><img src="<?= identitas("logo") ?>" alt="<?= identitas("judul") ?>" style="width:250px;"></a> </div>
                       </div>
                     </div>
                     <div class="row g-0 my-auto">
@@ -63,7 +63,7 @@
                         <p class="text-white fw-500 text-uppercase lh-base mb-5"><?= identitas("deskripsi") ?></p>
                       </div>
                     </div>
-                    <div style="position:float;bottom:20px;padding:20px;" class="text-light text-center">Bagian Sarana Prasarana dan Aset (BSPA)</div>
+                    <div style="position:float;bottom:20px;padding:20px;" class="text-light text-center">Download template ini melalui <a href="https://github.com/firexsantos/codeigniter-firexedition" class="text-warning fw-bold" target="_blank">Github</a></div>
                   </div>
                 </div>
               </div>
@@ -96,7 +96,7 @@
                 <div class="container pt-2 pb-3">
                   <div class="row">
                     <div class="col-10 col-lg-9 mx-auto text-center">
-                      <p class="text-2 text-muted mb-0">Copyright © 2023 <a href="<?= base_url() ?>"><?= identitas("judul")." - ".identitas("deskripsi") ?></a>. All Rights Reserved.</p>
+                      <p class="text-2 text-muted mb-0">Copyright © 2023 <a href="<?= base_url() ?>"><?= identitas("judul")." - ".identitas("deskripsi") ?></a>. Developed with love by <a href="https://www.sifirman.com" title="Firman Santosa - Jasa web dan aplikasi Pekanbaru Riau" target="_blank">Firman Santosa</a>.</p>
                     </div>
                   </div>
                 </div>

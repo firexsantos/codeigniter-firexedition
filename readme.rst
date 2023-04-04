@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/images/firex.png" width="400" alt="CodeIgniter Firex Edition"></p>
+
 ###################
 CodeIgniter 3 - Custom Firex Edition
 ###################
@@ -26,6 +28,6 @@ Server Requirements
 
 PHP version 7.x.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
+It should work on 5.6 as well, but we strongly advise you NOT to run
 such old versions of PHP, because of potential security and performance
 issues, as well as missing features.

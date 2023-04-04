@@ -5,19 +5,19 @@
 	
 	function identitas($jenis){
 		if(empty($jenis) || $jenis == "judul"){
-			return "One-Aset Rokania";
+			return "CodeIgniter Custom Firex Edition";
 		}else if($jenis == "deskripsi"){
-			return "Assets Integrated Management System of Rokania";
+			return "Framework CodeIgniter 3 Custom Firex Edition dengan Bootstrap 5";
 		}else if($jenis == "author"){
 			return "Firman Santosa";
 		}else if($jenis == "favicon"){
-			return base_url("assets/images/favicon.ico");
+			return base_url("assets/images/ci3.png");
 		}else if($jenis == "logo"){
-			return base_url("assets/images/rokania.png");
+			return base_url("assets/images/firex.png");
 		}else if($jenis == "logo-header"){
-			return base_url("assets/images/rokania.png");
+			return base_url("assets/images/firex.png");
 		}else if($jenis == "logo-header-dark"){
-			return base_url("assets/images/rokania.png");
+			return base_url("assets/images/firex.png");
 		}
 	}
 	
