@@ -12,9 +12,10 @@ CodeIgniter 3 Custom Firex Edition. Framework CI3 yang sudah full modifikasi men
 
 **************************
 ## Fitur-Fitur
--  CodeIgniter 3
--  Bootstrap 5
--  Premium Admin Template
+-  CodeIgniter 3 (Extreme Custom)
+-  Bootstrap v5.2.2
+-  Premium Admin Template (Limitless)
+-  Best Security
 -  MPDF 7
 -  Export Excel
 -  QR Code Generator
