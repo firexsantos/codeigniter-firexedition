@@ -7,8 +7,16 @@
 CodeIgniter 3 Custom Firex Edition. Framework CI3 yang sudah full modifikasi menggunakan Bootstrap 5 menjadi lebih powerful. 
 
 <p align="center"><img src="assets/images/sc/1.jpg" width="100%" alt="CodeIgniter Firex Edition"></p>
+Halaman Login
 <br>
 <p align="center"><img src="assets/images/sc/2.jpg" width="100%" alt="CodeIgniter Firex Edition"></p>
+Halaman Dashboard
+<br>
+<p align="center"><img src="assets/images/sc/3.jpg" width="100%" alt="CodeIgniter Firex Edition"></p>
+Halaman Pencarian
+<br>
+<p align="center"><img src="assets/images/sc/4.jpg" width="100%" alt="CodeIgniter Firex Edition"></p>
+Mode Perawatan
 
 **************************
 ## Fitur-Fitur
@@ -21,7 +29,7 @@ CodeIgniter 3 Custom Firex Edition. Framework CI3 yang sudah full modifikasi men
 -  QR Code Generator
 -  Anti XSS Injection
 -  Url Encryptor
--  Multiuser Multilevel
+-  Multiuser Multilevel (Switch Level User)
 -  Build up with Database MySQL
 -  Halaman Login cantik
 -  Halaman Dashboard
