@@ -24,13 +24,11 @@ CodeIgniter 3 Custom Firex Edition. Framework CI3 yang sudah full modifikasi men
 -  Dan banyak lagi
 
 *******************
-## Server Requirements
+## Persyaratan Server
 
 PHP version 7.x.
 
-It should work on 5.6 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+Seharusnya bekerja pada 5.6 juga, tapi sangat disarankan untuk TIDAK menjalankan versi PHP yang lampau, karena berpotensi masalah keamanan dan kinerja, serta fitur yang hilang.
 
   ## 💰 You can help me by Donating
   [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/firexsantos) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/firexserv) 
