@@ -25,7 +25,7 @@
 			<div class="navbar-brand flex-1">
 				<a href="<?= base_url() ?>" class="d-inline-flex align-items-center">
 					<img src="<?= identitas("logo") ?>" alt="<?= identitas("judul") ?>" class="h-32px">
-                    <span class="fw-bold text-dark mx-2 text-uppercase" style="font-size:18px;"><?= identitas("judul") ?></span>
+                    <!-- <span class="fw-bold text-dark mx-2 text-uppercase" style="font-size:18px;"><?= identitas("judul") ?></span> -->
 					<!-- <img src="<?= base_url() ?>assets/images/logo_text_dark.svg" class="d-none d-sm-inline-block h-16px invert-dark ms-3" alt=""> -->
 				</a>
 			</div>

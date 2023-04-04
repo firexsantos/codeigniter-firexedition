@@ -185,8 +185,75 @@
 						</div>
 					</div>
 
-
-					<img src="<?= base_url("assets/images/bg.jpg") ?>" style="width:100%; border-radius: 50px 0 200px 0;">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="mb-0">Lorem Ipsun Dolor si Rahmat</h5>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-hover table-striped">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Kolom 1</th>
+										<th>Kolom 2</th>
+										<th>Kolom 3</th>
+										<th>Kolom 4</th>
+										<th>Kolom 5</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1.</td>
+										<td>Mboh 1</td>
+										<td>Mboh 2</td>
+										<td>Mboh 3</td>
+										<td>Mboh 4</td>
+										<td>Mboh 5</td>
+									</tr>
+									<tr>
+										<td>2.</td>
+										<td>Mboh 1</td>
+										<td>Mboh 2</td>
+										<td>Mboh 3</td>
+										<td>Mboh 4</td>
+										<td>Mboh 5</td>
+									</tr>
+									<tr>
+										<td>3.</td>
+										<td>Mboh 1</td>
+										<td>Mboh 2</td>
+										<td>Mboh 3</td>
+										<td>Mboh 4</td>
+										<td>Mboh 5</td>
+									</tr>
+									<tr>
+										<td>4.</td>
+										<td>Mboh 1</td>
+										<td>Mboh 2</td>
+										<td>Mboh 3</td>
+										<td>Mboh 4</td>
+										<td>Mboh 5</td>
+									</tr>
+									<tr>
+										<td>5.</td>
+										<td>Mboh 1</td>
+										<td>Mboh 2</td>
+										<td>Mboh 3</td>
+										<td>Mboh 4</td>
+										<td>Mboh 5</td>
+									</tr>
+									<tr>
+										<td>6.</td>
+										<td>Mboh 1</td>
+										<td>Mboh 2</td>
+										<td>Mboh 3</td>
+										<td>Mboh 4</td>
+										<td>Mboh 5</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 
 				</div>
 				<!-- /content area -->

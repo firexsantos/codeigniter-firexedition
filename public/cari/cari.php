@@ -53,27 +53,27 @@
 
 <body>
 
+        <?php
+            $this->load->view("inc/nav");
+        ?>
 	<!-- Page content -->
 	<div class="page-content">
 
 		<?php
-            $this->load->view("inc/sidebar");
+            // $this->load->view("inc/sidebar");
         ?>
 
 
 		<!-- Main content -->
 		<div class="content-wrapper">
 
-			<?php
-                $this->load->view("inc/nav");
-            ?>
 
 
 			<!-- Inner content -->
 			<div class="content-inner">
 
 
-				<div class="content">
+				<div class="content container">
 
 
 

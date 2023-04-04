@@ -2,13 +2,6 @@
 <br>
 <p align="center"><img src="assets/images/firex.png" width="300" alt="CodeIgniter Firex Edition"></p>
 
-<p align="center">
-<a href="#"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="#"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="#"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="#"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
 ## CodeIgniter 3 - Custom Firex Edition
 
 CodeIgniter 3 Custom Firex Edition. Framework CI3 yang sudah full modifikasi menggunakan Bootstrap 5 menjadi lebih powerful. 
@@ -38,3 +31,6 @@ PHP version 7.x.
 It should work on 5.6 as well, but we strongly advise you NOT to run
 such old versions of PHP, because of potential security and performance
 issues, as well as missing features.
+
+  ## 💰 You can help me by Donating
+  [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/firexsantos) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/firexserv) 
