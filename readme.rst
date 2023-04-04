@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/images/firex.png" width="400" alt="CodeIgniter Firex Edition"></p>
+![CodeIgniter Firex Edition](assets/images/firex.png?raw=true "CodeIgniter Firex Edition")
 
 ###################
 CodeIgniter 3 - Custom Firex Edition
