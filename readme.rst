@@ -15,14 +15,14 @@ latest stable release please visit the `CodeIgniter Downloads
 **************************
 Fitur-fitur
 **************************
--  `CodeIgniter 3`_
--  `Bootstrap 5`_
--  `MPDF 7`_
--  `Anti Xss Injection`_
--  `Url Encryptor`_
--  `Multiuser Multilevel`_
--  `Build up with Database MySQL`_
--  `Dan banyak lagi`_
+-  CodeIgniter 3
+-  Bootstrap 5
+-  MPDF 7
+-  Anti Xss Injection
+-  Url Encryptor
+-  Multiuser Multilevel
+-  Build up with Database MySQL
+-  Dan banyak lagi
 
 *******************
 Server Requirements
