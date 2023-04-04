@@ -9,14 +9,8 @@
 	
 	$menu	= $this->uri->segment(3);
 	
-	if($menu == "lap-users"){
-		include "laporan/lap_users.php";
-	}else if($menu == "lap-pekerjaan"){
-		include "laporan/lap_pekerjaan.php";
-	}else if($menu == "lap-penyedia"){
-		include "laporan/lap_penyedia.php";
-	}else if($menu == "lap-jtk"){
-		include "laporan/lap_jtk.php";
+	if($menu == "contoh"){
+		include "laporan/contoh.php";
 	}
 	
 	else{

@@ -15,20 +15,8 @@
            Halaman: {PAGENO} / {nb}</td></tr></table>';
 	$menu	= $this->uri->segment(3);
 	
-	if($menu == "pekerjaan"){
-		include "laporan/pekerjaan.php";
-		$posisi = "A4-P";
-	}else if($menu == "lap-users"){
-		include "laporan/lap_users.php";
-		$posisi = "A4-P";
-	}else if($menu == "lap-pekerjaan"){
-		include "laporan/lap_pekerjaan.php";
-		$posisi = "A4-L";
-	}else if($menu == "lap-penyedia"){
-		include "laporan/lap_penyedia.php";
-		$posisi = "A4-L";
-	}else if($menu == "lap-jtk"){
-		include "laporan/lap_jtk.php";
+	if($menu == "contoh"){
+		include "laporan/contoh.php";
 		$posisi = "A4-P";
 	}
 	

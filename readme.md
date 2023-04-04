@@ -14,15 +14,21 @@ CodeIgniter 3 Custom Firex Edition. Framework CI3 yang sudah full modifikasi men
 ## Fitur-Fitur
 -  CodeIgniter 3
 -  Bootstrap 5
+-  Premium Admin Template
 -  MPDF 7
--  Anti Xss Injection
+-  Export Excel
+-  QR Code Generator
+-  Anti XSS Injection
 -  Url Encryptor
 -  Multiuser Multilevel
 -  Build up with Database MySQL
--  Halaman Login
+-  Halaman Login cantik
 -  Halaman Dashboard
 -  Halaman Profil
 -  Manajemen User
+-  Pencarian
+-  Mode Perawatan
+-  Custom 404
 -  Dan banyak lagi
 
 *******************
@@ -30,7 +36,7 @@ CodeIgniter 3 Custom Firex Edition. Framework CI3 yang sudah full modifikasi men
 
 PHP version 7.x.
 
-Seharusnya bekerja pada 5.6 juga, tapi sangat disarankan untuk TIDAK menjalankan versi PHP yang lampau, karena berpotensi masalah keamanan dan kinerja, serta fitur yang hilang.
+Seharusnya bekerja pada 5.6 juga, tapi sangat disarankan untuk TIDAK menjalankan versi PHP yang lampau, karena berpotensi masalah keamanan dan kinerja, serta fitur yang hilang. Mohon diperhatikan, plugin MPDF yang terpasang adalah untuk versi PHP >=7.x, jika Anda ingin menggunakan versi PHP lebih rendah, silahkan ganti plugin MPDF yang support dengan versi PHP yang Anda pilih.
 
   ## 💰 You can help me by Donating
   [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/firexsantos) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/firexserv) 

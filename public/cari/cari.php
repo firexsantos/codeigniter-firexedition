@@ -96,39 +96,24 @@
 
                     <?php
                     if(!empty($hasil)){
-                        $jumta = $this->db->query("SELECT a.* FROM pekerjaan_ta a LEFT JOIN pekerjaan b ON a.no_pekerjaan = b.no_pekerjaan WHERE b.status = 'final' AND (a.nm_ta LIKE '%".$hasil."%' OR a.nik LIKE '%".$hasil."%' OR a.noreg LIKE '%".$hasil."%')")->num_rows();
-
-                        $jumkerja = $this->db->query("SELECT a.*, b.`nm_opd`, c.`nm_modpilih`, d.`nm_pekerjaanjns` FROM pekerjaan a LEFT JOIN opd b ON a.`id_opd` = b.`id_opd` LEFT JOIN modpilih c ON a.`id_modpilih` = c.`id_modpilih` LEFT JOIN pekerjaanjns d ON a.`id_pekerjaanjns` = d.`id_pekerjaanjns` WHERE a.status = 'final' AND (a.nm_penyedia LIKE '%".$hasil."%' OR a.nm_pekerjaan LIKE '%".$hasil."%') ORDER BY a.no_pekerjaan DESC")->num_rows();
+                        $jumadmin = $this->db->query("SELECT a.*, b.nm_jk, c.nm_agama FROM users a LEFT JOIN jk b ON a.id_jk = b.id_jk LEFT JOIN agama c ON a.id_agama = c.id_agama WHERE (a.nama LIKE '%".$hasil."%' OR a.email LIKE '%".$hasil."%' OR a.username LIKE '%".$hasil."%')")->num_rows();
 
                         if($tab == "pekerjaan"){
-                            $acpekerjaan = "active";
-                            $acta = "";
-                            $fileno = "pekerjaan.php";
-                        }else if($tab == "ta"){
-                            $acpekerjaan = "";
-                            $acta = "active";
-                            $fileno = "ta.php";
+                            $acadmin = "active";
+                            $fileno = "admin.php";
                         }else{
-                            $acpekerjaan = "active";
-                            $acta = "";
-                            $fileno = "pekerjaan.php";
+                            $acadmin = "active";
+                            $fileno = "admin.php";
                         }
                     ?>
 					<!-- Tabs -->
 					<div class="nav-tabs-responsive mb-3">
 						<ul class="nav nav-tabs nav-tabs-underline">
 							<li class="nav-item">
-								<a href="<?= base_url("cari?tab=".enkrip("pekerjaan")."&s=".$hasil) ?>" class="nav-link <?= $acpekerjaan ?>">
-									<i class="ph-monitor me-2"></i>
-									Pekerjaan
-                                    <span class="badge bg-yellow text-black rounded-pill ms-2"><?= $jumkerja ?></span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="<?= base_url("cari?tab=".enkrip("ta")."&s=".$hasil) ?>" class="nav-link <?= $acta ?>">
-									<i class="ph-users-three me-2"></i>
-									Personil
-                                    <span class="badge bg-yellow text-black rounded-pill ms-2"><?= $jumta ?></span>
+								<a href="<?= base_url("cari?tab=".enkrip("admin")."&s=".$hasil) ?>" class="nav-link <?= $acadmin ?>">
+									<i class="ph-users me-2"></i>
+									Admin
+                                    <span class="badge bg-yellow text-black rounded-pill ms-2"><?= $jumadmin ?></span>
 								</a>
 							</li>
 						</ul>

@@ -4,52 +4,47 @@
         redirect("/auth/login", refresh);
     }
 
-    $no_register = antixss(dekrip($this->uri->segment(4)));
-    $sdata = $this->db->get_where("users", array("no_register" => $no_register));
-    $hdata = $sdata->num_rows();
-    if($hdata == 0){
-        $this->load->view('errors/404');
-    }else{
-        $ddata = $sdata->result_array();
-
-        $post = $this->input->post();
-        if(isset($post['editin'])){
-            $ceking = $this->db->query("SELECT * FROM users WHERE username = '".antixss($post['username'])."' AND no_register <> '".$no_register."'")->num_rows();
-            if($ceking > 0){
-                $this->session->set_flashdata('pesen', '<div class="alert alert-danger">Gagal! Username <b>'.antixss($post['username']).'</b> sudah terdaftar. Silahkan gunakan username lain.</div>');
-            }else{
-                $groupdef		= ".";
-                $nogrop = 1;
-                foreach($post['groupe'] as $mboh){
-                    $groupdef	.= $mboh.".";
-                    if($nogrop == 1){
-                        $id_group = $mboh;
-                    }
-                    $nogrop++;
+    $post = $this->input->post();
+	if(isset($post['tambahin'])){
+		$ceking = $this->db->get_where("users", array("username" => antixss($post['username'])))->num_rows();
+		if($ceking > 0){
+			$this->session->set_flashdata('pesen', '<div class="alert alert-danger">Gagal! Username <b>'.antixss($post['username']).'</b> sudah terdaftar. Silahkan gunakan username lain.</div>');
+		}else{
+            $no_register = autoregister();
+            $groupdef		= ".";
+            $nogrop = 1;
+			foreach($post['groupe'] as $mboh){
+				$groupdef	.= $mboh.".";
+                if($nogrop == 1){
+                    $id_group = $mboh;
                 }
-                $post_data	= array(
-                    "nama"	=> antixss($post['nama']),
-                    "nip"	=> antixss($post['nip']),
-                    "nik"	=> antixss($post['nik']),
-                    "id_jk"	=> antixss($post['id_jk']),
-                    "id_agama"	=> antixss($post['id_agama']),
-                    "hp"	=> antixss($post['hp']),
-                    "alamat"	=> antixss($post['alamat']),
-                    "email"	=> antixss($post['email']),
-                    "username"	=> antixss($post['username']),
-                    'id_group'		=> $id_group,
-                    'groupdef'		=> $groupdef,
-                );
+                $nogrop++;
+			}
+			$post_data	= array(
+				"no_register"	=> $no_register,
+				"nama"	=> antixss($post['nama']),
+				"nip"	=> antixss($post['nip']),
+				"nik"	=> antixss($post['nik']),
+				"id_jk"	=> antixss($post['id_jk']),
+				"id_agama"	=> antixss($post['id_agama']),
+				"hp"	=> antixss($post['hp']),
+				"alamat"	=> antixss($post['alamat']),
+				"email"	=> antixss($post['email']),
+				"username"	=> antixss($post['username']),
+				"password"	=> md5($post['password']),
+                'id_group'		=> $id_group,
+                'groupdef'		=> $groupdef,
+			);
 
-                $hajar		= $this->db->update("users", $post_data, array("no_register" => $no_register));
-                if($hajar){
-                    $this->session->set_flashdata('pesen', '<script>sukses("edit");</script>');
-                }else{
-                    $this->session->set_flashdata('pesen', '<script>gagal("edit");</script>');
-                }
-            }
-            redirect(base_url("users/superadmin"));
-        }
+			$hajar		= $this->db->insert("users", $post_data);
+			if($hajar){
+				$this->session->set_flashdata('pesen', '<script>sukses("tambah");</script>');
+			}else{
+				$this->session->set_flashdata('pesen', '<script>gagal("tambah");</script>');
+			}
+		}
+		redirect(base_url("users/superadmin"));
+	}
 ?><!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -89,49 +84,39 @@
 </head>
 
 <body>
+        <?php
+            $this->load->view("inc/nav");
+        ?>
 
 	<!-- Page content -->
 	<div class="page-content">
 
 		<?php
-            $this->load->view("inc/sidebar");
+            // $this->load->view("inc/sidebar");
         ?>
 
 
 		<!-- Main content -->
 		<div class="content-wrapper">
 
-			<?php
-                $this->load->view("inc/nav");
-            ?>
 
 
 			<!-- Inner content -->
 			<div class="content-inner">
 
-				<!-- Page header -->
-				<div class="page-header page-header-light shadow">
-					<div class="page-header-content d-lg-flex">
-						<div class="d-flex">
-							<h4 class="page-title mb-0">
-								<?= $title ?>
-							</h4>
-						</div>
-					</div>
+				<div class="page-header">
 
-					<div class="page-header-content d-lg-flex border-top">
+					<div class="page-header-content container d-lg-flex">
 						<div class="d-flex">
-							<div class="breadcrumb py-2">
-								<a href="<?= base_url("dash") ?>" class="breadcrumb-item"><i class="ph-house"></i></a>
-								<a href="<?= base_url("users/superadmin") ?>" class="breadcrumb-item">Data Super Admin</a>
-								<span class="breadcrumb-item active"><?= $title ?></span>
-							</div>
+							<h1 class="page-title mb-0">
+								<?= $title ?>
+							</h1>
 						</div>
 					</div>
 				</div>
+				
 
-
-				<div class="content">
+				<div class="content container pt-0">
 
                     <?php
                         echo $this->session->flashdata('pesen');
@@ -141,22 +126,12 @@
                         <div class="col-md-8 col-lg-6">
                             <form method="post" class="card">
                                 <div class="card-header">
-                                    <h5 class="mb-0"><?= $title ?></h5>
+                                    <a href="<?= base_url("users/admin") ?>" class="btn btn-primary"><i class="ph-arrow-left mx-2"></i> Kembali</a>
                                 </div>
                                 <div class="card-body">
                                     <div class="mb-2">
-                                        <label class="form-label">NIP :</label>
-                                        <input type="number" name="nip" value="<?= $ddata[0]['nip'] ?>" class="form-control" placeholder="Nomor Induk Pegawai" required>
-                                        <!-- <span class="form-text">+{3}0 000 000 000</span> -->
-                                    </div>
-                                    <div class="mb-2">
                                         <label class="form-label">Nama :</label>
-                                        <input type="text" name="nama" value="<?= $ddata[0]['nama'] ?>" class="form-control" placeholder="Nama Lengkap" required>
-                                        <!-- <span class="form-text">+{3}0 000 000 000</span> -->
-                                    </div>
-                                    <div class="mb-2">
-                                        <label class="form-label">NIK :</label>
-                                        <input type="text" name="nik" value="<?= $ddata[0]['nik'] ?>" class="form-control nikne" placeholder="Nomor Induk Kependudukan" required>
+                                        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required>
                                         <!-- <span class="form-text">+{3}0 000 000 000</span> -->
                                     </div>
                                     <div class="mb-2">
@@ -166,12 +141,7 @@
                                             <?php
                                                 $sjk = $this->db->get("jk");
                                                 foreach($sjk->result_array() as $djk){
-                                                    if($ddata[0]['id_jk'] == $djk['id_jk']){
-                                                        echo"<option value='".$djk['id_jk']."' selected>".$djk['nm_jk']."</option>";
-                                                    }else{
-                                                        echo"<option value='".$djk['id_jk']."'>".$djk['nm_jk']."</option>";
-                                                    }
-                                                    
+                                                    echo"<option value='".$djk['id_jk']."'>".$djk['nm_jk']."</option>";
                                                 }
                                             ?>
                                         </select>
@@ -183,29 +153,24 @@
                                             <?php
                                                 $sjk = $this->db->get("agama");
                                                 foreach($sjk->result_array() as $djk){
-                                                    if($ddata[0]['id_agama'] == $djk['id_agama']){
-                                                        echo"<option value='".$djk['id_agama']."' selected>".$djk['nm_agama']."</option>";
-                                                    }else{
-                                                        echo"<option value='".$djk['id_agama']."'>".$djk['nm_agama']."</option>";
-                                                    }
-                                                    
+                                                    echo"<option value='".$djk['id_agama']."'>".$djk['nm_agama']."</option>";
                                                 }
                                             ?>
                                         </select>
                                     </div>
                                     <div class="mb-2">
                                         <label class="form-label">Nomor Handphone :</label>
-                                        <input type="text" name="hp" value="<?= $ddata[0]['hp'] ?>" class="form-control hpne" placeholder="Nomor Handphone" required>
+                                        <input type="text" name="hp" class="form-control hpne" placeholder="Nomor Handphone" required>
                                         <!-- <span class="form-text">+{3}0 000 000 000</span> -->
                                     </div>
                                     <div class="mb-2">
                                         <label class="form-label">Alamat :</label>
-                                        <input type="text" name="alamat" value="<?= $ddata[0]['alamat'] ?>" class="form-control" placeholder="Alamat" required>
+                                        <input type="text" name="alamat" class="form-control" placeholder="Alamat" required>
                                         <!-- <span class="form-text">+{3}0 000 000 000</span> -->
                                     </div>
                                     <div class="mb-2">
                                         <label class="form-label">Email :</label>
-                                        <input type="email" name="email" value="<?= $ddata[0]['email'] ?>" class="form-control" placeholder="Email">
+                                        <input type="email" name="email" class="form-control" placeholder="Email">
                                         <!-- <span class="form-text">+{3}0 000 000 000</span> -->
                                     </div>
                                     <div class="mb-2">
@@ -213,15 +178,9 @@
                                         <span class="multiselect-native-select">
                                             <select class="form-control multiselect" multiple="multiple" data-include-select-all-option="true" name="groupe[]" required>
                                                 <?php
-                                                    $groupdef = explode(".",$ddata[0]['groupdef']);
                                                     $sgr = $this->db->query("SELECT * FROM `group` WHERE id_group <> '3'");
                                                     foreach($sgr->result_array() as $dgr){
-                                                        if(in_array($dgr['id_group'], $groupdef)){
-                                                            echo"<option value='".$dgr['id_group']."' selected>".$dgr['nm_group']."</option>";
-                                                        }else{
-                                                            echo"<option value='".$dgr['id_group']."'>".$dgr['nm_group']."</option>";
-                                                        }
-                                                        
+                                                        echo"<option value='".$dgr['id_group']."'>".$dgr['nm_group']."</option>";
                                                     }
                                                 ?>
                                             </select>
@@ -229,13 +188,18 @@
                                     </div>
                                     <div class="mb-2">
                                         <label class="form-label fw-bold">Username :</label>
-                                        <input type="text" name="username" value="<?= $ddata[0]['username'] ?>" class="form-control" placeholder="Username" required>
+                                        <input type="text" name="username" class="form-control" placeholder="Username" required>
+                                        <!-- <span class="form-text">+{3}0 000 000 000</span> -->
+                                    </div>
+                                    <div class="mb-2">
+                                        <label class="form-label fw-bold">Password :</label>
+                                        <input type="password" name="password" class="form-control" placeholder="Password" required>
                                         <!-- <span class="form-text">+{3}0 000 000 000</span> -->
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <a href="<?= base_url("users/superadmin") ?>" class="btn btn-link">Batal</a>
-                                    <button type="submit" name="editin" class="btn btn-primary">Simpan</button>
+                                    <a href="<?= base_url("users/admin") ?>" class="btn btn-link">Batal</a>
+                                    <button type="submit" name="tambahin" class="btn btn-primary">Simpan</button>
                                 </div>
                             </form>
                         </div>
@@ -270,4 +234,3 @@
 	</script>
 </body>
 </html>
-<?php } ?>
