@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	# RewriteRule ^d/(.*)?$ berkas/$1 [L]
+	
+	Options All -Indexes
+</IfModule>
+
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+
+
+php_value memory_limit 512M
+php_value upload_max_filesize 512M

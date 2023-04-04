@@ -1,0 +1,120 @@
+/*============================
+		COLOR Brown
+==============================*/
+a, a:focus {
+  color: #795548;
+}
+
+a:hover, a:active {
+  color: #5f4339;
+}
+
+.oxyy-login-register .nav:not(.nav-pills) .nav-item .nav-link.active, .oxyy-login-register .nav:not(.nav-pills) .nav-item .nav-link:hover {
+  color: #795548;
+}
+
+.oxyy-login-register .nav-tabs .nav-item .nav-link.active {
+  color: #0c2f55;
+}
+
+.oxyy-login-register .nav-tabs .nav-item .nav-link.active:after {
+  background-color: #795548;
+}
+
+.oxyy-login-register .nav-tabs .nav-item .nav-link:not(.active):hover {
+  color: #795548;
+}
+
+.oxyy-login-register .nav-tabs.flex-column .nav-item .nav-link.active {
+  color: #795548;
+}
+
+.oxyy-login-register .nav-pills .nav-link:not(.active):hover {
+  color: #795548;
+}
+
+.oxyy-login-register .bg-primary, .oxyy-login-register .badge-primary {
+  background-color: #795548 !important;
+}
+
+.oxyy-login-register .text-primary, .oxyy-login-register .link-primary, .oxyy-login-register .btn-link {
+  color: #795548 !important;
+}
+
+.oxyy-login-register .btn-link:hover, .oxyy-login-register .link-primary:hover {
+  color: #5f4339 !important;
+}
+
+.oxyy-login-register .text-muted {
+  color: #8e9a9d !important;
+}
+
+.oxyy-login-register .text-light {
+  color: #dee3e4 !important;
+}
+
+.oxyy-login-register a.bg-primary:focus, .oxyy-login-register a.bg-primary:hover, .oxyy-login-register button.bg-primary:focus, .oxyy-login-register button.bg-primary:hover {
+  background-color: #5f4339 !important;
+}
+
+.oxyy-login-register .border-primary {
+  border-color: #795548 !important;
+}
+
+.oxyy-login-register .btn-primary {
+  background-color: #795548;
+  border-color: #795548;
+}
+
+.oxyy-login-register .btn-primary:hover {
+  background-color: #5f4339;
+  border-color: #5f4339;
+}
+
+.oxyy-login-register .btn-primary:not(:disabled):not(.disabled).active, .oxyy-login-register .btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #5f4339;
+  border-color: #5f4339;
+}
+
+.oxyy-login-register .btn-primary.focus, .oxyy-login-register .btn-primary:focus {
+  background-color: #5f4339;
+  border-color: #5f4339;
+}
+
+.oxyy-login-register .btn-outline-primary, .oxyy-login-register .btn-outline-primary:not(:disabled):not(.disabled).active, .oxyy-login-register .btn-outline-primary:not(:disabled):not(.disabled):active {
+  color: #795548;
+  border-color: #795548;
+}
+
+.oxyy-login-register .btn-outline-primary:hover, .oxyy-login-register .btn-outline-primary:not(:disabled):not(.disabled).active:hover, .oxyy-login-register .btn-outline-primary:not(:disabled):not(.disabled):active:hover {
+  background-color: #795548;
+  border-color: #795548;
+  color: #fff;
+}
+
+.oxyy-login-register .progress-bar,
+.oxyy-login-register .nav-pills .nav-link.active, .oxyy-login-register .nav-pills .show > .nav-link, .oxyy-login-register .dropdown-item.active, .oxyy-login-register .dropdown-item:active {
+  background-color: #795548;
+}
+
+.oxyy-login-register .page-item.active .page-link,
+.oxyy-login-register .custom-radio .custom-control-input:checked ~ .custom-control-label:before,
+.oxyy-login-register .custom-control-input:checked ~ .custom-control-label::before,
+.oxyy-login-register .custom-checkbox .custom-control-input:checked ~ .custom-control-label:before,
+.oxyy-login-register .custom-control-input:checked ~ .custom-control-label:before {
+  background-color: #795548;
+  border-color: #795548;
+}
+
+.oxyy-login-register .list-group-item.active {
+  background-color: #795548;
+  border-color: #795548;
+}
+
+.oxyy-login-register .page-link {
+  color: #795548;
+}
+
+.oxyy-login-register .page-link:hover {
+  color: #5f4339;
+}
