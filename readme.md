@@ -48,5 +48,8 @@ PHP version 7.x.
 
 Seharusnya bekerja pada 5.6 juga, tapi sangat disarankan untuk TIDAK menjalankan versi PHP yang lampau, karena berpotensi terdapat isu pada masalah keamanan dan kinerja aplikasi, serta beberapa fitur akan hilang. Mohon diperhatikan, plugin MPDF yang terpasang adalah untuk versi PHP >=7.x, jika Anda ingin menggunakan versi PHP lebih rendah, silahkan ganti plugin MPDF yang support dengan versi PHP yang Anda pilih.
 
+## Demo dan Full Fitur
+https://www.youtube.com/watch?v=VCY0WSoP6SU
+
   ## 💰 You can help me by Donating
   [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/firexsantos) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/firexserv) 
