@@ -203,18 +203,6 @@ function rupiah(angka, prefix){
 	return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
 }
 
-function telegram(groupid, pesan){
-    $.ajax({
-        method: "POST",
-        //untuk group private
-        url: "https://api.telegram.org/bot5854535400:AAH2PM2x9NBUxNbg1J-iv-LE3uN7Gq7h-f0/sendMessage?chat_id="+groupid+"&parse_mode=html&text="+pesan,
-        //untuk group public
-        // url: "https://api.telegram.org/bot5854535400:AAH2PM2x9NBUxNbg1J-iv-LE3uN7Gq7h-f0/sendMessage?chat_id=@"+groupid+"&parse_mode=html&text="+pesan,
-        success: function(data){
-            // console.log(data);
-        }
-    });
-}
 
 var DateTimePickers = function() {
     const _componentDaterange = function() {
