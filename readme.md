@@ -4,7 +4,7 @@
 
 ## CodeIgniter 3 - Custom Firex Edition
 
-CodeIgniter 3 Custom Firex Edition. Framework CI3 yang sudah full modifikasi menggunakan Bootstrap 5 menjadi lebih powerful. 
+CodeIgniter 3 Super Custom Firex Edition. Framework CI3 yang sudah full modifikasi menggunakan Bootstrap 5 menjadi lebih powerful. 
 <br>
 
 <p align="center"><img src="assets/images/sc/1.jpg" width="100%" alt="CodeIgniter Firex Edition">Halaman Login</p>
