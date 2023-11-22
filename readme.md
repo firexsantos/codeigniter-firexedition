@@ -32,19 +32,19 @@ CodeIgniter 3 Super Custom Firex Edition. Framework CI3 yang sudah full modifika
 -  Url Encryptor
 -  Multiuser Multilevel (Switch Level User)
 -  Build up with Database MySQL
--  Halaman Login cantik
--  Halaman Dashboard
--  Halaman Profil
--  Manajemen User
--  Pencarian
--  Mode Perawatan
+-  Beautiful Login Page
+-  Dashboard Page
+-  Profile Page
+-  User Management
+-  Search Page
+-  Maintenance Mode
 -  Custom 404
--  Dan banyak lagi
+-  And much more
 
 *******************
 ## Persyaratan Server
 
-PHP version 7.x.
+PHP version 7.x./8.x
 
 Seharusnya bekerja pada 5.6 juga, tapi sangat disarankan untuk TIDAK menjalankan versi PHP yang lampau, karena berpotensi terdapat isu pada masalah keamanan dan kinerja aplikasi, serta beberapa fitur akan hilang. Mohon diperhatikan, plugin MPDF yang terpasang adalah untuk versi PHP >=7.x, jika Anda ingin menggunakan versi PHP lebih rendah, silahkan ganti plugin MPDF yang support dengan versi PHP yang Anda pilih.
 
