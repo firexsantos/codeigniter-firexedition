@@ -18,7 +18,7 @@ function antixss($string, $allowed_tags = array('a', 'em', 'strong', 'cite', 'bl
     return '';
   }
   _filter_xss_split($allowed_tags, TRUE);
-  $string = str_replace(chr(0), '', $string);
+  $string = str_replace(chr(0), '', (string)$string);
   $string = preg_replace('%&\s*\{[^}]*(\}\s*;?|$)%', '', $string);
   $string = str_replace('&', '&amp;', $string);
   $string = preg_replace('/&amp;#([0-9]+;)/', '&#\1', $string);
@@ -226,7 +226,7 @@ function decode_entities($text) {
 
 
 function validate_utf8($text) {
-  if (strlen($text) == 0) {
+  if (strlen((string)$text) == 0) {
     return TRUE;
   }
   return (preg_match('/^./us', $text) == 1);
